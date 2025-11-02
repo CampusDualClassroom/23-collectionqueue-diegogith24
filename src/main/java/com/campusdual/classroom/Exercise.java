@@ -5,13 +5,27 @@ import java.util.Queue;
 
 public class Exercise {
     public static Queue<String> createQueue() {
+        Queue<String> queue = new LinkedList<>();
 
+        queue.offer("Smith");
+        queue.offer("Montessori");
+        queue.offer("Peralta");
+        queue.offer("House");
+
+               return queue;
     }
     public static void printAndEmptyQueue(Queue<String> queue) {
+
+            while (queue.peek() != null) {
+                String queueActual = queue.poll();
+                System.out.println("Eliminando: " + queueActual);
+            }
 
     }
 
     public static void main(String[] args) {
+        Queue<String> queue = createQueue();
+        printAndEmptyQueue(queue);
 
     }
 
